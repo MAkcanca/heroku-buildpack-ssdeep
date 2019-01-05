@@ -35,7 +35,7 @@ if [ ! -d $CACHE_DIR/$VENDORED_SSDEEP ]; then
   rm -rf "$CACHE_DIR/vendor/ssdeep"
 
   mkdir -p $location
-  package="https://${S3_BUCKET}.s3.amazonaws.com/${STACK}/ssdeep-$SSDEEP_VERSION.tar.gz"
+  package="https://${S3_BUCKET}.s3.amazonaws.com/cedar-14/ssdeep-$SSDEEP_VERSION.tar.gz"
   echo $package | indent
   curl $package -s -o - | tar xzf - -C $location
 fi
